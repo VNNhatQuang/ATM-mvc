@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	height: 100%;
+}
+
+body {
+	height: 100%;
+}
+
+#main {
+	width: 100%;
+	height: 100%;
+	background: #f0f2f5;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#logo {
+	text-align: right;
+}
+
+#logo>p {
+	color: #0d5b94;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 20px; 
+}
+
+#form {
+	padding: 20px;
+	border-radius: 10px;
+	background: #fff;
+	box-shadow: 0 0 7px rgb(0 0 0 / 30%);
+}
+
+
+#form .btn {
+	width: 100%;
+}
+
+#form>form>span {
+	color: red;
+	margin: 10px 0;
+}
+
+#form>.register-status {
+	text-align: center;
+	color: red;
+	margin: 20px 0 10px 0;
+}
+
+#register {
+/* 	display: none; */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-100%);
+    transition: transform linear 0.1s;
+}
+
+#register>#space-close {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+}
+
+#register-model {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+    height: 100%;
+}
+
+#register-model>form {
+	background: #fff;
+	padding: 20px;
+	border-radius: 10px;
+	position: relative;
+}
+
+#register-model>form>#close {
+	font-size: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-radius: 50%;
+}
+
+#register-model>form>#close:hover {
+	background: #ccc;
+	color: #fff;
+}
+
+#register-model>form>#close>i {
+	font-weight: bold;
+}
+
+#register-model>form>.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	padding: 0;
+	min-width: 420px;
+}
+
+#register-model>form>p {
+	margin: 15px 0 5px 0;
+}
+
+#register-model>form input {
+	width: 100%;
+	float: left;
+}
+
+#register-model>form span {
+	color: red;
+}
