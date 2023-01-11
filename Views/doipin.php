@@ -1,21 +1,17 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-
 <html>
-
-
 <head>
 	<meta charset="UTF-8">
-	<title>ATM VietinBank</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Đổi PIN</title>
 	<link rel="icon" href="./assets/image/icon/icon.png">
-	<link rel="stylesheet" href="./assets/css/atm.css">
+	<link rel="stylesheet" href="./assets/css/doipin.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
-
 
 <body>
 	<div id="main">
@@ -25,21 +21,25 @@
 				<img src="./assets/image/icon/logo.png" width="250">
 			</div>
 			<div class="title">
-				<p>Mời quý khách chọn giao dịch</p>
+				<p>Quý khách vui lòng nhập số PIN mới</p>
 			</div>
 		</div>
+		
 		<div id="menu">
-			<div class="col1">
-				<button onclick="location.href='chuyenkhoanController'" type="button" class="btn btn-primary">Chuyển khoản</button>
-				<button onclick="location.href='ruttienController'" type="button" class="btn btn-primary">Rút tiền</button>
-				<button onclick="location.href='naptienController'" type="button" class="btn btn-primary">Nạp tiền</button>
-				<button onclick="location.href='thoatController'" type="button" class="btn btn-danger">Thoát</button>
-			</div>
-			<div class="col2">
-				<button onclick="location.href='doipinController'" type="button" class="btn btn-primary">Đổi PIN</button>
-				<button onclick="location.href='vantintkController'" type="button" class="btn btn-primary">Vấn tin TK</button>
-				<button onclick="location.href='lsgdController'" type="button" class="btn btn-primary">Lịch sử giao dịch</button>
-			</div>
+			<form action="/_PHP/ATM_mvc/Controllers/doipinController.php" method="post">
+				<div class="contain">
+					<p>Nhập PIN mới:</p> 
+					<input type="password" name="pinmoi" class="form-control form-control-lg" placeholder="Nhập mã PIN">
+				</div>
+				<div class="contain">
+					<p>Nhập lại PIN:</p> 
+					<input type="password" name="checkpinmoi" class="form-control form-control-lg" placeholder="Nhập lại mã PIN">
+				</div>
+				<div class="col">
+					<input type="submit" value="Đồng ý" class="btn btn-warning">
+					<a href="/_PHP/ATM_mvc/Views/atm.php" class="btn btn-warning">Trở lại</a>
+				</div>
+			</form>
 		</div>
 	</div>
 </body>

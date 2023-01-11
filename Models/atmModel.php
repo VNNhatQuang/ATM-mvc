@@ -98,6 +98,7 @@
             $kn->KetNoi();
             $sql = "select * from chitiettaikhoan where SoTaiKhoan='$SoTaiKhoan'";
             $rs = $kn->cn->query($sql);
+            // $rs = $rs->fetch_array();
             $kn->cn->close();
             return $rs;
         }
@@ -117,6 +118,16 @@
     // $atm->ChuyenKhoan('vnnquang', 1, 'htlam');
     // $atm->NapTien('vnnquang', 1);
     // $atm->DoiMaPIN('nvquy', 'danquy123');
-    // $rs = $atm->XemLSGD('htlam');
+    $rs = $atm->XemLSGD('vnnquang');
     
+?>
+
+<?php
+    // foreach($rs as $l) {
+    //     echo $l['SoTaiKhoan'];
+    //     echo $l['SoTien'];
+    //     echo $l['GhiChu'];
+    //     echo $l['NgayRutTien'];
+    // }
+
 ?>
