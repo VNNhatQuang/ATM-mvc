@@ -26,11 +26,11 @@
 		</div>
 		
 		<div id="menu">
-			<form action="naptienController" method="post">
+			<form action="/_PHP/ATM_mvc/Controllers/naptienController.php" method="post">
 				<input type="number" min="0" name="st" class="form-control form-control-lg" placeholder="Nhập số tiền">
 				<div class="col">
 					<input type="submit" value="Nạp tiền" class="btn btn-warning">
-					<a href="atmController" class="btn btn-warning">Trở lại</a>
+					<a href="/_PHP/ATM_mvc/Views/atm.php" class="btn btn-warning">Trở lại</a>
 				</div>
 			</form>
 		</div>

@@ -41,7 +41,7 @@
 						?>
 								<tr>
 									<td><?php echo $l['SoTaiKhoan']; ?></td>
-									<td><?php echo $l['SoTien']; ?></td>
+									<td><?php echo number_format($l['SoTien'], 0, ',') . ' VND'; ?></td>
 									<td><?php echo $l['GhiChu']; ?></td>
 									<td><?php echo $l['NgayRutTien']; ?></td>
 								</tr>

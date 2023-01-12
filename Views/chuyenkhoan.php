@@ -27,16 +27,18 @@
 
         <div id="menu">
 
-            <form action="chuyenkhoanController" method="post">
+            <form action="/_PHP/ATM_mvc/Controllers/chuyenkhoanController.php" method="post">
                 <div class="contain">
                     <p>Nhập STK nhận:</p>
-                    <!-- <%	String tk = "";
-                        if(session.getAttribute("tknhan")!=null) { 
-                            taikhoanbean tknhan = (taikhoanbean) session.getAttribute("tknhan");
-                            tk = tknhan.getSoTaiKhoan();
+                    <?php
+                        $tk = "";
+                        session_start();
+                        if(isset($_SESSION['tknhan'])) {
+                            $tknhan = $_SESSION['tknhan'];
+                            $tk = $tknhan['SoTaiKhoan'];
                         }
-                    %> -->
-                    <input type="text" name="stknhan" class="form-control form-control-lg" placeholder="Nhập STK nhận" value="">
+                    ?>
+                    <input type="text" name="stknhan" class="form-control form-control-lg" placeholder="Nhập STK nhận" value="<?php echo $tk;?>">
                 </div>
                 <div class="contain">
                     <p>Số tiền chuyển:</p>
@@ -51,25 +53,23 @@
                     <div class="col1">
                         <input name="xacnhantk" type="submit" class="btn btn-primary" value="Xác nhận tài khoản">
                     </div>
-                    <!-- <%
-                        if(session.getAttribute("tknhan")!=null) {
-                            taikhoanbean tknhan = (taikhoanbean) session.getAttribute("tknhan");
-                    %>
-                        <span>STK : <%=tknhan.getHoTen()%> - <%=tknhan.getSoTaiKhoan()%></span>
-                    <%} %>
-                    
-                    <%	
-                        if(session.getAttribute("checktk")!=null) {
-                    %>
-                        <span>Số tài khoản không tồn tại</span>
-                    <%} %> -->
+
+                    <?php  if(isset($_SESSION['tknhan'])) {
+                            $tknhan = $_SESSION['tknhan'];  ?>
+                            <span>STK : <?php echo $tknhan['HoTen']; ?> - <?php echo $tknhan['SoTaiKhoan'];?></span>
+                    <?php  } ?>
+
+                    <?php  if(isset($_SESSION['checktk'])) {    ?>
+                            <span>Số tài khoản không tồn tại</span>
+                    <?php  } ?>
+
                     <div class="col2">
-                        <!-- <% if(session.getAttribute("tknhan")!=null) { %>
-                            <input name="chuyenkhoan" type="submit" value="Chuyển khoản" class="btn btn-warning">
-                        <%} else { %>
-                            <input name="chuyenkhoan" type="text" value="Chuyển khoản" readonly="readonly" class="btn btn-secondary">
-                        <%} %> -->
-                        <a href="atmController" class="btn btn-warning">Trở lại</a>
+                        <?php  if(isset($_SESSION['tknhan'])) { ?>
+                                <input name="chuyenkhoan" type="submit" value="Chuyển khoản" class="btn btn-warning">
+                        <?php  } else {    ?>
+                                <input name="chuyenkhoan" type="text" value="Chuyển khoản" readonly="readonly" class="btn btn-secondary">
+                        <?php  } ?>
+                        <a href="/_PHP/ATM_mvc/Views/atm.php" class="btn btn-warning">Trở lại</a>
                     </div>
                 </div>
             </form>

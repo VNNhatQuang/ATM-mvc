@@ -26,15 +26,15 @@
         </div>
         <div id="menu">
             <div class="col1">
-                <button onclick="location.href='xulyruttienController?st=500000'" type="button" class="btn btn-warning">500.000 VND</button>
-                <button onclick="location.href='xulyruttienController?st=2000000'" type="button" class="btn btn-warning">2.000.000 VND</button>
-                <button onclick="location.href='xulyruttienController?st=5000000'" type="button" class="btn btn-warning">5.000.000 VND</button>
+                <button onclick="location.href='/_PHP/ATM_mvc/Controllers/xulyruttienController.php?st=500000'" type="button" class="btn btn-warning">500.000 VND</button>
+                <button onclick="location.href='/_PHP/ATM_mvc/Controllers/xulyruttienController.php?st=2000000'" type="button" class="btn btn-warning">2.000.000 VND</button>
+                <button onclick="location.href='/_PHP/ATM_mvc/Controllers/xulyruttienController.php?st=5000000'" type="button" class="btn btn-warning">5.000.000 VND</button>
             </div>
             <div class="col2">
-                <button onclick="location.href='xulyruttienController?st=1000000'" type="button" class="btn btn-warning">1.000.000 VND</button>
-                <button onclick="location.href='xulyruttienController?st=3000000'" type="button" class="btn btn-warning">3.000.000 VND</button>
-                <button onclick="location.href='ruttiensokhacController'" type="button" class="btn btn-warning">Số khác</button>
-                <button onclick="location.href='atmController'" type="button" class="btn btn-danger">Trở lại</button>
+                <button onclick="location.href='/_PHP/ATM_mvc/Controllers/xulyruttienController.php?st=1000000'" type="button" class="btn btn-warning">1.000.000 VND</button>
+                <button onclick="location.href='/_PHP/ATM_mvc/Controllers/xulyruttienController.php?st=3000000'" type="button" class="btn btn-warning">3.000.000 VND</button>
+                <button onclick="location.href='/_PHP/ATM_mvc/Controllers/ruttiensokhacController.php'" type="button" class="btn btn-warning">Số khác</button>
+                <button onclick="location.href='/_PHP/ATM_mvc/Views/atm.php'" type="button" class="btn btn-danger">Trở lại</button>
             </div>
         </div>
     </div>

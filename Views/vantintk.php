@@ -36,7 +36,7 @@
                 </div>
                 <div>
 
-                    <p><?php echo number_format($tk['SoTien'], 0, ',', '.') . ' VND'; ?></p>
+                    <p><?php echo number_format($tk['SoTien'], 0, ',') . ' VND'; ?></p>
 
                 </div>
             </div>

@@ -27,7 +27,7 @@
 		</div>
 		<div id="menu">
 			<div class="col1">
-				<button onclick="location.href='atmController'" type="button" class="btn btn-danger">Trở lại</button>
+				<button onclick="location.href='/_PHP/ATM_mvc/Views/ruttien.php'" type="button" class="btn btn-danger">Trở lại</button>
 			</div>
 			<div class="col2">
 			</div>

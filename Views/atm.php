@@ -30,9 +30,9 @@
         </div>
         <div id="menu">
             <div class="col1">
-                <button onclick="location.href='chuyenkhoanController'" type="button" class="btn btn-primary">Chuyển khoản</button>
-                <button onclick="location.href='ruttienController'" type="button" class="btn btn-primary">Rút tiền</button>
-                <button onclick="location.href='naptienController'" type="button" class="btn btn-primary">Nạp tiền</button>
+                <button onclick="location.href='/_PHP/ATM_mvc/Controllers/chuyenkhoanController.php'" type="button" class="btn btn-primary">Chuyển khoản</button>
+                <button onclick="location.href='/_PHP/ATM_mvc/Controllers/ruttienController.php'" type="button" class="btn btn-primary">Rút tiền</button>
+                <button onclick="location.href='/_PHP/ATM_mvc/Controllers/naptienController.php'" type="button" class="btn btn-primary">Nạp tiền</button>
                 <button onclick="location.href='/_PHP/ATM_mvc/Controllers/thoatController.php'" type="button" class="btn btn-danger">Thoát</button>
             </div>
             <div class="col2">

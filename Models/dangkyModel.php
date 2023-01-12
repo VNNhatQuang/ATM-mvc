@@ -17,7 +17,6 @@
                 return $dn->ktdn($SoTaiKhoan, $MatKhau);
             }
             else {
-                print_r($result->error);
                 return null;
             }
 

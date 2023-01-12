@@ -36,11 +36,11 @@
 		</div>
 		
 		<div id="menu">
-			<form action="xulyruttienController" method="post">
+			<form action="/_PHP/ATM_mvc/Controllers/xulyruttienController.php" method="get">
 				<input type="number" min="50000" max="5000000" name="st" class="form-control form-control-lg" placeholder="Nhập số tiền">
 				<div class="col">
 					<input type="submit" value="Đồng ý" class="btn btn-warning">
-					<a href="ruttienController" class="btn btn-warning">Trở lại</a>
+					<a href="/_PHP/ATM_mvc/Controllers/ruttienController.php" class="btn btn-warning">Trở lại</a>
 				</div>
 			</form>
 		</div>
