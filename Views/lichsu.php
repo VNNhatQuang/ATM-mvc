@@ -35,20 +35,17 @@
 
 						<?php
 							session_start();
-							$lsgd = $_SESSION['lsgd'];
-							// $tk = $_SESSION['tk'];
-							// require_once('../Models/atmModel.php');
-							// $atm = new atmModel;
-							// $lsgd = $atm->XemLSGD($tk['SoTaiKhoan']);
-							foreach ($lsgd as $l) {
+							if($_SESSION['lsgd']!=null) {
+								$lsgd = $_SESSION['lsgd'];
+								foreach ($lsgd as $l) {
 						?>
-							<tr>
-								<td><?php echo $l['SoTaiKhoan']; ?></td>
-								<td><?php echo $l['SoTien']; ?></td>
-								<td><?php echo $l['GhiChu']; ?></td>
-								<td><?php echo $l['NgayRutTien']; ?></td>
-							</tr>
-						<?php } ?>
+								<tr>
+									<td><?php echo $l['SoTaiKhoan']; ?></td>
+									<td><?php echo $l['SoTien']; ?></td>
+									<td><?php echo $l['GhiChu']; ?></td>
+									<td><?php echo $l['NgayRutTien']; ?></td>
+								</tr>
+							<?php }} ?>
 						
 					</table>
 				</div>

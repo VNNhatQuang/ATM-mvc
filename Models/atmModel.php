@@ -98,9 +98,14 @@
             $kn->KetNoi();
             $sql = "select * from chitiettaikhoan where SoTaiKhoan='$SoTaiKhoan'";
             $rs = $kn->cn->query($sql);
-            // $rs = $rs->fetch_array();
+            // Chắc giống rs.next() bên java
+            while($listdata = mysqli_fetch_array($rs)) {
+                if($listdata == 0)
+                    break;
+                $data[] = $listdata;
+            }
             $kn->cn->close();
-            return $rs;
+            return $data;
         }
 
 
@@ -127,7 +132,7 @@
     //     echo $l['SoTaiKhoan'];
     //     echo $l['SoTien'];
     //     echo $l['GhiChu'];
-    //     echo $l['NgayRutTien'];
+    //     echo $l['NgayRutTien'] . '<br>';
     // }
 
 ?>
