@@ -1,7 +1,7 @@
 <?php
 	session_start();
-	$tk = $_SESSION['tk'];
-	if($tk!=null) {
+	if(isset($_SESSION['tk'])) {
+		$tk = $_SESSION['tk'];
 		header('location: http://localhost/_PHP/ATM_mvc/Views/atm.php');
 	}
 	else {

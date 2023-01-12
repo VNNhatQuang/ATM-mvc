@@ -27,6 +27,7 @@
 				<div>
 					<table class="table table-hover">
 						<tr>
+							<th>Mã giao dịch</th>
 							<th>Số tài khoản</th>
 							<th>Số tiền giao dịch</th>
 							<th>Mô tả</th>
@@ -40,6 +41,7 @@
 								foreach ($lsgd as $l) {
 						?>
 								<tr>
+									<td><?php echo $l['Id']; ?></td>
 									<td><?php echo $l['SoTaiKhoan']; ?></td>
 									<td><?php echo number_format($l['SoTien'], 0, ',') . ' VND'; ?></td>
 									<td><?php echo $l['GhiChu']; ?></td>
